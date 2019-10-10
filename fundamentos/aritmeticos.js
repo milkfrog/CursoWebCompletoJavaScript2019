@@ -10,3 +10,5 @@ const divisao = d / a
 console.log(divisao)
 const modulo = a % 2
 console.log(modulo)
+
+// teste do git no vscode usando bash do ubuntu no windows
