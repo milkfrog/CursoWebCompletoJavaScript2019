@@ -1,1 +1,1 @@
-quaseArray
+return newArray
