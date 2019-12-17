@@ -24,3 +24,4 @@ console.log(chavesVariadas.size)
 chavesVariadas.set(123, 'a')
 chavesVariadas.set(123, 'b') // sobrescreve pq nao pode ter chave repetida
 console.log(chavesVariadas)
+

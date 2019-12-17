@@ -13,9 +13,9 @@ for (let assunto of assuntosEcma) {
 }
 
 const assuntosMap = new Map([
-    ['Map', {abordado: true}],
-    ['Set', {abordado: true}],
-    ['Promise', {abordado: false}]
+    ['Map', { abordado: true }],
+    ['Set', { abordado: true }],
+    ['Promise', { abordado: false }]
 ])
 
 for (let assunto of assuntosMap) {
