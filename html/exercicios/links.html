@@ -3,11 +3,23 @@
 <!-- URL Absoluta -->
 <!-- URL absoluto DEVE colocar o protocolo http -->
 
-<a href="https://www.google.com.br">Google 1</a><br />
+<a id="inicio" href="https://www.google.com.br">Google 1</a><br />
 <!-- Abre nova aba e acesa o site: -->
 <a href="https://www.google.com.br" target="_blank">Google 2</a><br><br>
 
 <!-- URL Relativa -->
 <a href="index.html">Voltar 1</a><br>
 <a href="/index.html">Voltar 2</a><br>
-<a href="../index.html">Voltar 3</a>
+<a href="../index.html">Voltar 3</a><br><br>
+
+<!-- Para envio de email: -->
+<a href="mailto:email@empresa.com.br">Entre em contato</a><br><br>
+
+<!-- Ancora:  -->
+<div id="noticia" style="position:absolute;top:2000px">
+    <h1>Notícia Buemba!</h1>
+    <p>Não era nada... :)</p>
+    <a href="#inicio">Ir para inicio!</a>
+</div>
+
+<a href="#noticia">Ir para Notícia</a>
