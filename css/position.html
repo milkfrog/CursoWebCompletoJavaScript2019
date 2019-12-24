@@ -5,7 +5,63 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div {
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+        }
+
+        .static {
+            top: 100px; /* Não faz diferença por ser static */
+            left: 100px; /* Não faz diferença por ser static */
+            background-color: steelblue;
+        }
+
+        .fixed {
+            position: fixed; /*Pode rolar a página e o elemento continua fixo!!! foda pra carai */
+            bottom: 30px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1 {
+            position: relative;
+            left: 50px; /*Leva em consideração o elemento anterior */
+            top: 5px; /*Leva em consideração o elemento anterior */
+            background-color: seagreen;
+        }
+
+        .absolute1 {
+            position: absolute; /* Posiciona de forma absoluta! */
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2 {
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategrey;
+        }
+
+        .absolute2 {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        .sticky {
+            position: -webkit-sticky; /* pra funcionar o Safari */
+            position: sticky; /* Mantém ao descer a barra de rolagem na posição q marcar */
+            background-color: #777;
+            top: 0;
+        }
     </style>
 </head>
 
