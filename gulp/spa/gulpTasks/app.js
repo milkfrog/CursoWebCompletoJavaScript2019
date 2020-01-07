@@ -35,3 +35,7 @@ function appImgs() {
 }
 
 exports.tasks = gulp.parallel(appHtml, appCss, appJs, appImgs)
+exports.html = gulp.series(appHtml)
+exports.css = gulp.series(appCss)
+exports.js = gulp.series(appJs)
+exports.imgs = gulp.series(appImgs)
