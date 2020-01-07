@@ -1,17 +1,13 @@
 const gulp = require('gulp')
 const util = require('gulp-util')
+const uglifycss = require('gulp-uglifycss')
+const concat = require('gulp-concat')
 //const sequence = require('run-sequence')
 
-require('./gulpTasks/app')
-require('./gulpTasks/deps')
-require('./gulpTasks/servidor')
+const deps = require('./gulpTasks/deps')
+const app = require('./gulpTasks/app')
+const servidor = require('./gulpTasks/servidor')
 
-gulp.task('default', () => {
-    if(util.env.production) { // gulp --production pra disparar a flag
-        //sequence('deps', 'app')
-        gulp.start('deps', 'app')
-    } else {
-        //sequence('deps', 'app', 'servidor')
-        gulp.start('deps', 'app', 'servidor')
-    }
-})
+
+
+exports.default = gulp.series(gulp.parallel(deps.tasks, app.tasks), servidor.tasks) 

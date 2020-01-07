@@ -1,19 +1,19 @@
 const gulp = require('gulp')
 
-gulp.task('app', ['app.html', 'app.css', 'app.js', 'app.imgs'])
+function appHtml(done) {
+    done()
+}
 
-gulp.task('app.html', () => {
-    
-})
+function appCss(done) {
+    done()
+}
 
-gulp.task('app.css', () => {
-    
-})
+function appJs(done) {
+    done()
+}
 
-gulp.task('app.js', () => {
-    
-})
+function appImgs(done) {
+    done()
+}
 
-gulp.task('app.imgs', () => {
-
-})
+exports.tasks = gulp.parallel(appHtml, appCss, appJs, appImgs)

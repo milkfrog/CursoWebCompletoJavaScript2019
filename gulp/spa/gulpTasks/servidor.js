@@ -1,9 +1,9 @@
 const gulp = require('gulp')
 
-gulp.task('monitorarMudancas', () => {
+function monitorarMudancas(done) {
+    done()
+}
 
-})
-
-gulp.task('servidor', ['monitorarMudancas'], () => {
-    
+exports.tasks = gulp.series(monitorarMudancas, (done) => {
+    done()
 })
