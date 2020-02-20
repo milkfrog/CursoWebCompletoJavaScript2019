@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 //import Primeiro from './componentes/Primeiro'
 // import BomDia from './componentes/BomDia'
 
-import  Multi from './componentes/Multiplos'
+import  Saudacao from './componentes/Saudacao'
 
 
 // const elemento = <h2>React 2</h2>
@@ -13,8 +13,7 @@ import  Multi from './componentes/Multiplos'
 // tem q ter a primeira letra maiuscula o componente, visando diferenciar de tags padrão!!
 ReactDOM.render(
     <div>
-        <Multi.BoaTarde nome='Ana'/>
-        <Multi.BoaNoite nome='Bia'/>
+        <Saudacao tipo="Bom dia" nome="João"/>
     </div>
     , document.getElementById('root'))
 
