@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom'
 // import  Saudacao from './componentes/Saudacao'
 
 import Exemplo from './componentes/pai'
-
+import Filho from './componentes/filho'
 
 // const elemento = <h2>React 2</h2>
 // ReactDOM.render(elemento, document.getElementById('root'))
@@ -16,9 +16,13 @@ import Exemplo from './componentes/pai'
 ReactDOM.render(
     <React.Fragment>
         <div>
-            <Exemplo.Pai nome="Paulo" sobrenome="Silva" />
-            {/* Como passo os componentes Filhos aqui? */}
-            
+            <Exemplo.Pai nome="Paulo" sobrenome="Silva">
+                {/* Como passo os componentes Filhos aqui? */}
+                <Filho nome="Pedro" />
+                <Filho nome="Paulo" />
+                <Filho nome="Carla" />
+            </Exemplo.Pai>
+          
         </div>
         <div>
             <Exemplo.Teste teste="dsad" hahahs="dsada" kfsdfkfs={10} dsad={22.22}/>
