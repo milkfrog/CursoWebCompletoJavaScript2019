@@ -68,7 +68,7 @@ footer.footer {
     }   
 }
 
-@media(max-width: 575px) {
+@media(max-width: 576px) {
     .app {
         grid-template-rows: 
         var(--logo-height)
