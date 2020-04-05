@@ -6,3 +6,6 @@ where regiao = 'Sul';
 select nome, regiao, populacao from `estados`
 where populacao >= 10
 order by populacao desc;
+
+
+select est.nome from estados est where sigla = 'MA'
