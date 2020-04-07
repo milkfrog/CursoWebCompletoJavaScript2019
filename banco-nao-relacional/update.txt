@@ -8,3 +8,5 @@ db.estados.update(
 )
 
 db.estados.find({populacao: {$exists: true}}, {_id: 0, nome: 1})
+
+db.estados.update( {sigla: "SP", "cidades.nome": "Santos" }, {$set: {"cidades.$._id": ObjectId()}})
