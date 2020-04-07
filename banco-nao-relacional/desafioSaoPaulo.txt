@@ -1,0 +1,112 @@
+Estado
+nome = São Paulo, sigla = SP, regiao = Sudeste
+    Cidades
+    nome = Campinas, area = 795.7, prefeito = Jonas Donizette, populacao = 1081000
+    nome = Garulhos, populacao = 1325000
+    nome = Sorocaba, distanciaCapital = 87, populacao = 644919
+
+Cada Cidade tem o atributo _id <- ObjectId
+
+db.estados.insert({
+    nome: "São Paulo",
+    sigla: "SP",
+    regiao: "Sudeste",
+    cidades: [{
+        _id: ObjectId(),
+        nome: "Campinas",
+        area: 795.7,
+        prefeito: "Jonas Donizette",
+        populacao: 1081000
+    }, {
+        _id: ObjectId(),
+        nome: "Garulhos",
+        populacao: 1325000
+    }, {
+        _id: ObjectId(),
+        nome: "Sorocaba",
+        distanciaCapital: 87,
+        populacao: 644919
+    }]
+})
+
+
+> db.estados.insert({
+... nome: "São Paulo",
+... sigla: "SP"
+... ,
+... regiao: "Sudeste",
+... cidades: [{
+... _id: ObjectId(),
+... nome: "Campinas",
+... area: 795.7,
+... prefeito: "Jonas Donizette",
+... populacao: 1081000
+... }, {
+...
+... _id: ObjectId(),
+... nome: "Guarulhos",
+... populacao: 1325000
+... }, {
+... _id: ObjectId(),
+... nome: "Sorocaba",
+... distanciaCapital: 87,
+... populacao: 644919
+... }]
+... })
+WriteResult({ "nInserted" : 1 })
+> show collections
+estados
+> db.estados.find().pretty()
+{
+        "_id" : ObjectId("5e8ca98418bce682bfd7cbbe"),
+        "nome" : "Acre",
+        "sigla" : "AC",
+        "regiao" : "Norte"
+}
+{
+        "_id" : ObjectId("5e8ca9d918bce682bfd7cbbf"),
+        "nome" : "Alagoas",
+        "sigla" : "AL",
+        "regiao" : "Nordeste",
+        "populacao" : 3322000
+}
+{
+        "_id" : ObjectId("5e8cab1918bce682bfd7cbc0"),
+        "nome" : "Rio de Janeiro",
+        "sigla" : "RJ",
+        "regiao" : "Sudeste",
+        "cidades" : [
+                {
+                        "nome" : "Niterói",
+                        "area" : 133.9,
+                        "populacao" : 4875662
+                }
+        ]
+}
+{
+        "_id" : ObjectId("5e8cb4b418bce682bfd7cbc4"),
+        "nome" : "São Paulo",
+        "sigla" : "SP",
+        "regiao" : "Sudeste",
+        "cidades" : [
+                {
+                        "_id" : ObjectId("5e8cb4b418bce682bfd7cbc1"),
+                        "nome" : "Campinas",
+                        "area" : 795.7,
+                        "prefeito" : "Jonas Donizette",
+                        "populacao" : 1081000
+                },
+                {
+                        "_id" : ObjectId("5e8cb4b418bce682bfd7cbc2"),
+                        "nome" : "Guarulhos",
+                        "populacao" : 1325000
+                },
+                {
+                        "_id" : ObjectId("5e8cb4b418bce682bfd7cbc3"),
+                        "nome" : "Sorocaba",
+                        "distanciaCapital" : 87,
+                        "populacao" : 644919
+                }
+        ]
+}
+>    
