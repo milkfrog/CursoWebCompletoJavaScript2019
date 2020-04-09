@@ -3,10 +3,13 @@ const app = express()
 
 const saudacao = require('./saudacaoMid')
 const usuarioApi = require('./api/usuario')
+const produtoApi = require('./api/produto')
 
 app.post('/usuario', usuarioApi.salvar)
 app.get('/usuario', usuarioApi.obter)
 
+
+produtoApi(app, 'com param!')
 
 // bodyParser não é mais necessário, o proprio express possui a mesma funcionalidade:
 app.use(express.text())
