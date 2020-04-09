@@ -3,6 +3,12 @@ const app = express()
 
 const saudacao = require('./saudacaoMid')
 
+
+// bodyParser não é mais necessário, o proprio express possui a mesma funcionalidade:
+app.use(express.text())
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 app.use(saudacao('Marcelo'))
 
 // cadeia de responsabilidade, função middleware.
@@ -15,6 +21,12 @@ app.get('/clientes/relatorio', (req, res) => {
     res.send(`Cliente relatório: completo = ${req.query.completo} ano = ${req.query.ano}`)
 })
 
+
+app.post('/corpo2', (req, res) => {
+    // res.send(JSON.stringify(req.body))
+    res.send(req.body)
+})
+
 app.post('/corpo', (req, res) => {
     let corpo = ''
     req.on('data', (parte) => {
@@ -24,7 +36,6 @@ app.post('/corpo', (req, res) => {
     req.on('end', () => {
         res.send(corpo)
     })
-
     // req.on('end', () => {
     //     res.json(JSON.parse(corpo))
     // })
