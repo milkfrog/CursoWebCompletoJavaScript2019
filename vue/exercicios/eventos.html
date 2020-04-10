@@ -7,9 +7,51 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
-
+    <div id="app">
+        <p>{{ contador }}</p>
+        <p>
+            <!-- equivalentes: v-on: e @-->
+            <button v-on:click="add">+1</button>
+            <!-- da pra fazer direto assim: -->
+            <!-- <button @click="contador -= 2">-2</button> -->
+            <button @click="subtract(teste)">-{{ teste }}</button>
+        </p>
+        <!-- associado somente a div p abaixo: -->
+        <p @mousemove="atualizarPosicao">
+            Coordenadas: {{x}} e {{y}}
+            <span @mousemove.stop><strong>Aqui Não!</strong></span>
+            <span @mousemove="stop"><strong>Aqui Não 2</strong></span>
+        </p>
+        <input type="text" @keypress.enter="alerta">
+    </div>
     <script>
-        // ...
+        new Vue({
+            el: '#app',
+            data: {
+                x: 0,
+                y: 0,
+                contador: 0,
+                teste: 3
+            },
+            methods: {
+                add() {
+                    this.contador++
+                },
+                subtract(x) {
+                    this.contador = this.contador - x
+                },
+                atualizarPosicao(e) {
+                    this.x = e.clientX
+                    this.y = e.clientY
+                },
+                stop(e) {
+                    e.stopPropagation()
+                },
+                alerta() {
+                    alert('Enter!')
+                }
+            }
+        })
     </script>
 </body>
 </html>
