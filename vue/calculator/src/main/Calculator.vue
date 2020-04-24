@@ -84,7 +84,7 @@ export default {
             //     this.values[i] = newValue
             // }
         }
-    }
+    } 
 }
 </script>
 
