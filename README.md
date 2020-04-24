@@ -12,6 +12,7 @@
 - jQuery;  
 - React;  
 - Vue.js;  
+- Angular 9;  
 - Banco Relacional;  
 - Banco Não Relacional;  
 - Express;  
